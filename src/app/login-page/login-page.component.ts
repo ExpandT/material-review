@@ -34,11 +34,10 @@ export class LoginPageComponent {
   }
 
   constructor(private readonly formBuilder: FormBuilder, private readonly matDialog: MatDialog) {
-    this.signUpForm.valueChanges.pipe(
-      tap(() => console.log(this.signUpForm))).subscribe()
+
   }
 
-  openModal(){
+  openModal() {
     const dialogConfig = new MatDialogConfig();
 
     dialogConfig.disableClose = false;
