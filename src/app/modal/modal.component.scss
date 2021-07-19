@@ -1,0 +1,22 @@
+.modal-container {
+  .modal-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      margin: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+    }
+    a{
+      display: flex;
+    }
+  }
+  .uploaded-img-container{
+    max-width: 300px;
+    max-height: 300px;
+
+  }
+}

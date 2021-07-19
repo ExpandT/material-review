@@ -1,0 +1,148 @@
+.sign-up-container {
+  height: 100%;
+  display: flex;
+
+  .background-sign-up-img {
+    width: 1073px;
+    height: auto;
+    background: url(../images/bg-image.png) no-repeat center;
+    background-size: cover;
+  }
+
+  .sign-up-form {
+    padding-top: 152px;
+    padding-left: 161px;
+    padding-right: 246px;
+    width: auto;
+    background: #061C1F;
+
+    .sign-up-form-container {
+      text-align: center;
+
+      h1 {
+        color: #FFFFFF;
+        font-family: 'Khula', sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 56px;
+        //margin-bottom: 168px;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 16px;
+        margin-bottom: 24px;
+      }
+
+      .google-sign-up-btn {
+        align-content: center;
+        color: #2E3B3E;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 16px;
+        margin-bottom: 32px;
+        background: #FFFFFF;
+        width: 212px;
+        height: 56px;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+
+      .facebook-sign-up-btn {
+        background: #2F80ED;;
+        color: #FFFFFF;
+        width: 212px;
+        height: 56px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+
+        img {
+          margin-right: 14px;
+        }
+      }
+
+      .example-form {
+        width: 440px;
+        height: 344px;
+      }
+
+      .example-full-width {
+        width: 440px;
+        height: 56px;
+        margin-bottom: 40px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+
+        .form-error-container {
+          width: 440px;
+          height: 28px;
+        }
+
+        input {
+          caret-color: #00897B;
+        }
+
+        .error-icon {
+          color: #FA4141;
+        }
+      }
+
+      .submit-form-btn {
+        background-color: #00897B;
+        width: 440px;
+        height: 56px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+
+      .disabled {
+        background: #7C8C99;
+      }
+
+      .or-container {
+        margin-bottom: 32px;
+
+        hr {
+          width: 185px;
+          border-color: #FFFFFF33;
+          display: inline-block;
+        }
+
+        span {
+          margin: 0 24px;
+          color: #FFFFFF99;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .have-account-container {
+        margin-top: 32px;
+        text-align: center;
+        color: #FFFFFF99;
+        font-size: 16px;
+        line-height: 24px;
+
+        a {
+          text-decoration: none;
+          font-weight: 700;
+          color: #00897B;
+        }
+      }
+    }
+  }
+}
+
+.display {
+  visibility: hidden;
+}

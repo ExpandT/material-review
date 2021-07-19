@@ -1,0 +1,56 @@
+<div class="sign-up-container">
+  <div class="background-sign-up-img"></div>
+  <div class="sign-up-form">
+    <div class="sign-up-form-container">
+      <h1>Sign Up</h1>
+      <p>with your social network</p>
+      <button class="google-sign-up-btn" (click)="openModal()" mat-raised-button><img
+        src="./assets/Google_icon_color.svg" alt="Google Icon">Google
+      </button>
+      <button class="facebook-sign-up-btn" mat-raised-button><img src="./assets/facebook-logo.svg" alt="Facebook Icon">Facebook
+      </button>
+      <div class="or-container">
+        <hr>
+        <span>Or</span>
+        <hr>
+      </div>
+      <div>
+        <form class="example-form" [formGroup]="signUpForm">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email">
+            <mat-icon class="error-icon" *ngIf="signUpForm.get('email')?.hasError('email')" matSuffix>error
+            </mat-icon>
+            <mat-error *ngIf="signUpForm.controls['email'].errors?.required">Can't be empty</mat-error>
+            <mat-error *ngIf="signUpForm.controls['email'].errors?.email">Not valid email</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input [type]="passwordFieldType" matInput formControlName="password">
+            <button mat-icon-button matSuffix (click)="changePasswordVisibility()">
+              <mat-icon>{{iconName(this.showPassword)}}</mat-icon>
+            </button>
+            <mat-error *ngIf="signUpForm.controls['password'].errors?.required">Can't be empty</mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Confirm password</mat-label>
+            <input [type]="confirmPasswordFieldType" matInput formControlName="confirmPassword">
+            <button mat-icon-button matSuffix (click)="changeConfirmPasswordVisibility()">
+              <mat-icon>{{iconName(this.showConfirmPassword)}}</mat-icon>
+            </button>
+            <mat-error *ngIf="signUpForm.controls['confirmPassword'].errors?.required">Can't be empty</mat-error>
+            <mat-error *ngIf="signUpForm.hasError('passwordMismatch')">Passwords should match each other</mat-error>
+          </mat-form-field>
+          <button class="submit-form-btn" [disabled]="signUpForm.invalid" [class.disabled]="signUpForm.invalid"
+                  type="submit" mat-raised-button color="accent" (click)="submit()">Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="have-account-container">
+        <p>Already have an account? <a href="#">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
